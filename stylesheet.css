@@ -1,0 +1,8 @@
+h1 {
+    font-weight: bold;
+}
+
+.muted {
+    color: rgb(129, 129, 129);
+    font-size: small;
+}

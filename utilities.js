@@ -26,17 +26,23 @@ async function getPlayerStats(name, tag){
         player.damageSR = null;
         player.supportSR = null;
 
+        // Div containing the information we want.
         let ranks = $('div[class=competitive-rank-level]');
-        ranks.each( (x, y) => {
+        ranks.each((x, y) => {
+            
+            // Accessing the inforation within the divs.
             let role = y.prev.attribs['data-ow-tooltip-text'];
             let sr = y.children[0].data;
             
+            // Assign the number value if role exists.
             if(role.startsWith("Tank")) player.tankSR = parseInt(sr);
             if(role.startsWith("Damage")) player.damageSR = parseInt(sr);
             if(role.startsWith("Support")) player.supportSR = parseInt(sr);
 
         })
 
+        // This appears whenever no ranks can be found.
+        // This also appears if you enter an invalid URL.
         if (ranks.length == 0)
         {
             console.log(`No competitive ranks found for ${player.battleTag}`); 
@@ -82,6 +88,8 @@ async function removeAllPlayers() {
 }
 
 // Update player (Replace old player with new player)
+// The addPlayer(a, b) function checks the database if the player is present.
+// If player already exists, it updates it.
 async function updatePlayer(player) {
     let a = player.split("#");
     let name = a[0];

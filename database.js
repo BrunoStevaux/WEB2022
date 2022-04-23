@@ -54,6 +54,8 @@ function getAll() {
 
 // Update specific player
 function update(player) {
+
+    // Find entry that matches battle tag and replace it with a new one.
     db.prepare(
         "UPDATE accounts SET battleTag = ?, lastUpdated = ?, tankSR = ?, damageSR = ?, supportSR = ? WHERE battleTag = ?"
     ).run(
