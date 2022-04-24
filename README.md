@@ -30,18 +30,17 @@ We wanted to create a web application that allowed users to track the current co
 
 ## **Features**
 
-* Search and add an Overwatch account to track its competitive rankings
-* Refresh/update an Overwatch account's rankings
-* Refresh/update ALL Overwatch account's rankings
-* Delete an Overwatch account from the tracker
-* Delete ALL Overwatch accounts from the tracker
+- Search and add an Overwatch account to track its competitive rankings
+- Refresh/update an Overwatch account's rankings
+- Refresh/update ALL Overwatch account's rankings
+- Delete an Overwatch account from the tracker
+- Delete ALL Overwatch accounts from the tracker
 
 ### **Built With**
 
-
-* [Express.js](https://expressjs.com/)
-* [Bootstrap](https://getbootstrap.com)
-* [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [Bootstrap](https://getbootstrap.com)
+- [Node.js](https://nodejs.org/)
 
 <!-- GETTING STARTED -->
 ## **Getting Started**
@@ -50,7 +49,7 @@ We wanted to create a web application that allowed users to track the current co
 
 better-sqlite3 requires the use of msvs2017+ on windows or xcode on macOS. See [better-sqlite3 troubleshooting guide](https://github.com/JoshuaWise/better-sqlite3/blob/HEAD/docs/troubleshooting.md) if you have an issues with installation.
 
-* You can ensure that your npm installation is up to date by running the following command
+- You can ensure that your npm installation is up to date by running the following command
 
   ```sh
   npm install npm@latest -g
@@ -116,22 +115,22 @@ Any of these accounts should be valid and their profiles should be public.
 
 _These are just accounts from my friends. However, any public accounts will work too._
 
-* `Me0w#21660`
-* `mia#12401`
-* `SEILTAM#1140`
-* `diesofcringe#1384`
-* `CassDEEZnuts#1379`
-* `Kirameki#21712`
-* `Ace803v3#1710`
-* `SistineFibel#1350`
-* `StormHawks#11711`
-* `Terminal#11354`
-* `IfedNicksMom#1366`
-* `Zuious#1576`
-* `Exalted#11497`
-* `PizzaLawyer#11545`
-* `TrickyZerg#114653`
-* `Śĺāŷěŕ#1752`
+- `Me0w#21660`
+- `mia#12401`
+- `SEILTAM#1140`
+- `diesofcringe#1384`
+- `CassDEEZnuts#1379`
+- `Kirameki#21712`
+- `Ace803v3#1710`
+- `SistineFibel#1350`
+- `StormHawks#11711`
+- `Terminal#11354`
+- `IfedNicksMom#1366`
+- `Zuious#1576`
+- `Exalted#11497`
+- `PizzaLawyer#11545`
+- `TrickyZerg#114653`
+- `Śĺāŷěŕ#1752`
 
 You can also try usernames that do not follow the mentioned [naming policy](https://us.battle.net/support/en/article/26963).
 
