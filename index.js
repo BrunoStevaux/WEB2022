@@ -88,7 +88,7 @@ async function getPlayerStats(req, res) {
         return;
     }
     else if (tag.length > 6 || tag.length == 0) {
-        err = "Tag must be between 3 and 6 digits";
+        err = "Tag must be 6 digits or less";
         res.redirect("/");
         return;
     }
