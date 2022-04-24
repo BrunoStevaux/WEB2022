@@ -15,8 +15,9 @@ function setupDatabase() {
 // Retrieve stats from Blizzard Website
 async function getPlayerStats(name, tag){
     try
-    {    
-        const response = await axios.get(`https://playoverwatch.com/en-us/career/pc/${name}-${tag}/`)
+    {   
+        // Encode URI incase user enters in name such as: Śĺāŷěŕ#1752
+        const response = await axios.get(encodeURI(`https://playoverwatch.com/en-us/career/pc/${name}-${tag}/`));
 
         const $ = cheerio.load(response.data);
         const player = {};
@@ -29,7 +30,7 @@ async function getPlayerStats(name, tag){
         // Div containing the information we want.
         let ranks = $('div[class=competitive-rank-level]');
         ranks.each((x, y) => {
-            
+
             // Accessing the inforation within the divs.
             let role = y.prev.attribs['data-ow-tooltip-text'];
             let sr = y.children[0].data;
