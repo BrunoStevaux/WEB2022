@@ -71,8 +71,8 @@ async function addPlayer(name, tag) {
 }
 
 // Get all players from the DB 
-async function getAllPlayers() {
-    return database.getAll();
+async function getAllPlayers(sort = "lastUpdated DESC") {
+    return database.getAll(sort);
 }
 
 // Remove specific player from DB

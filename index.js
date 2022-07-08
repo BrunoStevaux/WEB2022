@@ -8,6 +8,8 @@ const app = express()
 const port = 3000
 const jsonParser = bodyParser.json();
 
+let sort = null;
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.set('view engine', 'ejs');
@@ -63,7 +65,8 @@ async function del(req, res) {
 
 // Homepage 
 async function displayHome(req, res) {
-    const players = await utilities.getAllPlayers();
+    sort = req.query.sort;
+    const players = await utilities.getAllPlayers(sort);
     
     // Show "Updated x mins ago"
     players.forEach((item) => {

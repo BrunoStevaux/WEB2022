@@ -50,9 +50,9 @@ function insert(player) {
 }
 
 // Get all users
-function getAll() {
+function getAll(sort = "lastUpdated DESC") {
     return db.prepare(
-        "SELECT * FROM accounts ORDER BY lastUpdated DESC;",
+        `SELECT * FROM accounts ORDER BY ${sort};`,
     ).all();
 }
 

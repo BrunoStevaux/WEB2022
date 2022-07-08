@@ -30,10 +30,28 @@
 
     <!-- Display any error messages here -->
     <%if(err.length > 0) {%>
-
     <h2 class="text-danger"><%=err%></h2>
     <% } %>
-
+    
+    <!-- Thanks Richard -->
+<div style="display: flex; justify-content: space-between; max-width: 500px; margin-bottom: 5px;">
+    <form action="/">
+        <button name="sort" class="btn btn-secondary" value = "lastUpdated DESC">Recent</button>
+    </form>
+    <form action="/">
+        <button name="sort" class="btn btn-secondary" value = "battleTag DESC">A-Z</button>
+    </form>
+    <form action="/">
+        <button name="sort" class="btn btn-secondary" value = "tankSR DESC">Tank</button>
+    </form>
+    <form action="/">
+        <button name="sort" class="btn btn-secondary" value = "damageSR DESC">Damage</button>
+    </form>
+    <form action="/">
+        <button name="sort" class="btn btn-secondary" value = "supportSR DESC">Support</button>
+    </form>
+</div>
+    
     <div clas="table-responsive-sm">
         <table class='table table-bordered table-striped table-hover'>
             <thead class='thead-dark'>
