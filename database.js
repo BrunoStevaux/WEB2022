@@ -9,6 +9,8 @@ function setup() {
             id              INTEGER PRIMARY KEY AUTOINCREMENT,
             battleTag       TEXT NOT NULL,
             lastUpdated     INTEGER NOT NULL,
+            placed          TEXT,
+            private         TEXT,
             tankSR          INTEGER,
             damageSR        INTEGER,
             supportSR       INTEGER
@@ -34,10 +36,12 @@ function insert(player) {
 
     // Add new player
     db.prepare(
-        "INSERT OR IGNORE INTO accounts (battleTag, lastUpdated, tankSR, damageSR, supportSR) VALUES (?, ?, ?, ?, ?);",
+        "INSERT OR IGNORE INTO accounts (battleTag, lastUpdated, placed, private, tankSR, damageSR, supportSR) VALUES (?, ?, ?, ?, ?, ?, ?);",
     ).run(
         player.battleTag,
         player.lastUpdated,
+        player.placed,
+        player.private,
         player.tankSR,
         player.damageSR,
         player.supportSR,
@@ -57,10 +61,12 @@ function update(player) {
 
     // Find entry that matches battle tag and replace it with a new one.
     db.prepare(
-        "UPDATE accounts SET battleTag = ?, lastUpdated = ?, tankSR = ?, damageSR = ?, supportSR = ? WHERE battleTag = ?"
+        "UPDATE accounts SET battleTag = ?, lastUpdated = ?, placed = ?, private = ?, tankSR = ?, damageSR = ?, supportSR = ? WHERE battleTag = ?"
     ).run(
         player.battleTag,
         player.lastUpdated,
+        player.placed,
+        player.private,
         player.tankSR,
         player.damageSR,
         player.supportSR,

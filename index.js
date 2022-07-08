@@ -97,7 +97,7 @@ async function getPlayerStats(req, res) {
     // If player has no stats (addPlayer function returns false)
     // This is also called if the play cannot be found. They are treated the same.
     if (!player) {
-        err = `No competitive ranks found or profile does not exist for ${req.query.playerInput}. Names are case sensitive.`
+        err = `Profile does not exist for ${req.query.playerInput}. Names are case sensitive.`
     }
     res.redirect("/");
 }

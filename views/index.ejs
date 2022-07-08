@@ -39,11 +39,13 @@
             <thead class='thead-dark'>
                     <th class="align-middle col-sm-3">Account Name</th>
                     <th class="align-middle col-sm-2">Last Updated</th>
+                    <th class="align-middle col-sm-1">Placed?</th>
+                    <th class="align-middle col-sm-1">Private?</th>
                     <th class="text-center align-middle col-sm-1">Tank SR</th>
                     <th class="text-center align-middle col-sm-1">Damage SR</th>
                     <th class="text-center align-middle col-sm-1">Support SR</th>
-                    <th class="text-center align-middle col-sm-2">RERESH</th>
-                    <th class="text-center align-middle col-sm-2">DELETE</th>
+                    <th class="text-center align-middle col-sm-1">REFRESH</th>
+                    <th class="text-center align-middle col-sm-1">DELETE</th>
                 </tr>
             </thead>
 
@@ -51,9 +53,10 @@
                 <!-- Add each player from the database into the table -->
                 <% tag.forEach( (item) => { %>
                 <tr>
-
                     <td><%= item.battleTag %></td>
                     <td><%= item.lastUpdated %></td>
+                    <td class="text-center align-middle"><%= item.placed %></td>
+                    <td class="text-center align-middle"><%= item.private %></td>
                     <div class="SRs">
                         <td class="text-center align-middle"><%= item.tankSR %></td>
                         <td class="text-center align-middle"><%= item.damageSR %></td>
